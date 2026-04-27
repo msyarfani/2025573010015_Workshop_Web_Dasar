@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ===== COMPONENT @apply ===== */
+
+.btn-primary {
+  @apply px-5 py-2 bg-blue-500 text-white rounded-xl 
+  font-semibold hover:bg-blue-600 transition;
+}
+
+.card {
+  @apply bg-white dark:bg-gray-800 shadow-lg 
+  rounded-xl p-6 text-center;
+}
+
+.section-title {
+  @apply text-2xl md:text-3xl font-bold 
+  text-center mb-10 
+  text-gray-800 dark:text-white;
+}
