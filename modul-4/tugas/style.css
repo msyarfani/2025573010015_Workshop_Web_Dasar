@@ -10,8 +10,6 @@
   --space-lg: 40px;
 }
 
-/* RESET */
-
 * {
   margin: 0;
   padding: 0;
@@ -24,7 +22,6 @@ body {
   line-height: 1.6;
 }
 
-/* NAVBAR */
 
 .navbar {
   position: sticky;
