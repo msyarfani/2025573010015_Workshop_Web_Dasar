@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Shop Keren</title>
+
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background: #0f172a;
+        color: white;
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      /* PRODUK */
+      .produk {
+        flex: 2;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+        padding: 20px;
+      }
+
+      .card {
+        background: #1e293b;
+        border-radius: 15px;
+        overflow: hidden;
+        transition: 0.3s;
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+      }
+
+      .card img {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+      }
+
+      .card-body {
+        padding: 10px;
+      }
+
+      button {
+        padding: 8px;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+      }
+
+      .btn-add {
+        background: #22c55e;
+        color: white;
+        width: 100%;
+      }
+
+      .btn-add:hover {
+        background: #16a34a;
+      }
+
+      /* KERANJANG */
+      .keranjang {
+        flex: 1;
+        background: #020617;
+        padding: 20px;
+      }
+
+      .item {
+        border-bottom: 1px solid #334155;
+        padding: 10px 0;
+      }
+
+      .qty button {
+        margin-right: 5px;
+      }
+
+      .badge {
+        background: red;
+        padding: 4px 8px;
+        border-radius: 50%;
+        font-size: 12px;
+      }
+
+      /* MODAL */
+      .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        display: none;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modal-content {
+        background: white;
+        color: black;
+        padding: 20px;
+        border-radius: 10px;
+        width: 300px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="produk" id="produk-list"></div>
+
+    <div class="keranjang">
+      <h2>🛒 Keranjang <span id="badge" class="badge">0</span></h2>
+      <div id="cart-items"></div>
+      <h3>Total: Rp <span id="total">0</span></h3>
+      <button id="checkout">Checkout</button>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal" id="modal">
+      <div class="modal-content">
+        <h3>Checkout</h3>
+        <div id="ringkasan"></div>
+        <button onclick="tutupModal()">Tutup</button>
+      </div>
+    </div>
+
+    <script src="latihan-2.js"></script>
+  </body>
+</html>
